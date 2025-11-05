@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+
+/* ensure full-viewport and remove default margin that can hide background */
+@layer base {
+  html, body, #root {
+    height: 100%;
+  }
+  body {
+    margin: 0;
+  }
+}
+
+/* fallback utility that forces a linear-gradient if Tailwind gradient is overridden */
+@layer utilities {
+  .bg-hero {
+    background-image: linear-gradient(to right, #2563eb, #06b6d4, #4f46e5) !important;
+  }
+}
